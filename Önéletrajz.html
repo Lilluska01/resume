@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pletser Lilla – CV</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(-45deg, #0b5cff, #00d4ff, #7b2ff7, #f107a3);
+      background-size: 400% 400%;
+      animation: gradientShift 18s ease infinite;
+      color: #eee;
+      line-height: 1.6;
+      margin: 0;
+    }
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      min-height: 100vh;
+      background: rgba(18, 18, 18, 0.85);
+    }
+
+    .sidebar {
+      background: rgba(20, 20, 30, 0.95);
+      padding: 32px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 4px 0 12px rgba(0,0,0,0.4);
+    }
+    .profile-pic {
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      margin-bottom: 20px;
+      border: 1 solid transparent;
+      background: linear-gradient(90deg, #0b5cff, #00d4ff, #7b2ff7, #f107a3);
+      background-size: 300% 300%;
+      animation: borderShift 6s linear infinite;
+      padding: 2px;
+    }
+    @keyframes borderShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .contact { width: 100%; margin-top: 10px; }
+    .contact h2 { font-size: 1.1em; color: #00d4ff; margin-bottom: 10px; }
+    .contact p { margin: 6px 0; font-size: 0.95em; }
+    .contact a { color: #7b9dff; text-decoration: none; }
+    .contact a:hover { text-decoration: underline; }
+
+
+    .content { padding: 40px; }
+    h1 { margin-top: 0; font-size: 2em; color: #00d4ff; }
+    h2 { margin-bottom: 12px; font-size: 1.3em; color: #7b9dff; }
+
+    .card {
+      background: rgba(30, 30, 40, 0.9);
+      border-radius: 12px;
+      padding: 20px;
+      margin: 20px 0;
+      border: 3px solid transparent;
+      background-clip: padding-box;
+      position: relative;
+    }
+    .card::before {
+      content: "";
+      position: absolute;
+      top: -3px; left: -3px; right: -3px; bottom: -3px;
+      border-radius: 14px;
+      background: linear-gradient(90deg, #0b5cff, #00d4ff, #7b2ff7, #f107a3);
+      background-size: 300% 300%;
+      z-index: -1;
+      animation: borderShift 8s linear infinite;
+    }
+
+    ul { padding-left: 20px; }
+    ul li { margin-bottom: 8px; }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 18px;
+      background: #00d4ff;
+      color: #121212;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: opacity 0.3s ease;
+    }
+    .btn:hover { opacity: 0.85; }
+
+    .lang-switch {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      font-size: 0.95em;
+      color: #fff;
+    }
+    .lang-switch span {
+      cursor: pointer;
+      margin: 0 4px;
+      opacity: 0.7;
+    }
+    .lang-switch span.active {
+      text-decoration: underline;
+      opacity: 1;
+      font-weight: 600;
+    }
+
+    .lang { display: none; }
+    .lang.hu { display: inline; }
+
+    @media (max-width: 800px) {
+      .layout { grid-template-columns: 1fr; }
+      .sidebar {
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 20px;
+        padding: 20px;
+      }
+      .contact { flex: 1; }
+      .profile-pic { width: 100px; height: 100px; }
+      .content { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <img src="profil.jpg" alt="Profilkép" class="profile-pic">
+      <div class="contact">
+        <h2>
+          <span class="lang hu">Elérhetőség</span>
+          <span class="lang en">Contact</span>
+        </h2>
+        <p class="lang hu"><b>Név:</b><br>Pletser Lilla</br></p>	<p class="lang en"><b>Name:</b><br>Lilla Pletser</br></p>
+        <p class="lang hu"><b>Cím:</b><br>2457 Adony, Árpád utca 10/3</br></p>	<p class="lang en"><b>Address:</b><br> 2457 Adony, Árpád street 10/3</br></p>
+        <p class="lang hu"><b>Telefon:</b><br><a href="tel:+36204048611">+36 20 404 8611</a></br></p>	<p class="lang en"><b>Phone:</b><br> <a href="tel:+36204048611">+36 20 404 8611</a></br></p>
+        <p class="lang hu"><b>Email:</b><br><a href="mailto:pletserlilla001@gmail.com">pletserlilla001@gmail.com</a></br></p>	<p class="lang en"><b>Email:</b><br> <a href="mailto:pletserlilla001@gmail.com">pletserlilla001@gmail.com</a></br></p>
+      </div>
+    </aside>
+
+
+    <main class="content">
+      <h1>
+        <span class="lang hu">Pletser Lilla | <i> Önéletrajz</i></span>
+        <span class="lang en">Lilla Pletser | <i> Resume</i></span>
+      </h1>
+	  
+      <section class="card">
+        <h2><span class="lang hu">Tanulmányok</span><span class="lang en">Education</span></h2>
+        <ul>
+          <li>
+            <span class="lang hu">Százhalombattai Arany János Általános Iskola és Gimnázium - Matematika-Informatika (2018-2022)</span>
+            <span class="lang en">Arany János Elementary and High School - Math/IT (2018–2022)</span>
+          </li>
+          <li>
+            <span class="lang hu">Dunaújvárosi Egyetem - Mérnökinformatika (2023- )</span>
+            <span class="lang en">University of Dunaújváros - Computer Science Engineering (2023- )</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2><span class="lang hu">Munkatapasztalat</span><span class="lang en">Work Experience</span></h2>
+        <ul>
+          <li><span class="lang hu"><b>Telekom</b> - Műszaki ügyfélszolgálat (2024- )</span><span class="lang en"><b>Telekom</b> – Technical Support (2024- )</span></li>
+          <li><span class="lang hu"><b>Logiscool</b> - Programozás oktató (2021- )</span><span class="lang en"><b>Logiscool</b> – Programming Instructor (2021- )</span></li>
+          <li><span class="lang hu"><b>Progress Étteremhálózat Kft.</b> - Koordinátor (2022-2023) [Ajánlott előléptetés által]</span><span class="lang en"><b>Progress Restaurant Ltd.</b> - Coordinator (2022-2023) [By promotion]</span></li>
+          <li><span class="lang hu"><b>Progress Étteremhálózat Kft.</b> - Éttermi dolgozó (2021-2022)</span><span class="lang en"><b>Progress Restaurant Ltd.</b> - Restaurant Worker (2021-2022)</span></li>
+          <li><span class="lang hu"><b>Magyar Államvasutak</b> - Jegykiadó asszisztens (2019-2021)</span><span class="lang en"><b>Hungarian State Railways</b> - Ticket Assistant (2019-2021)</span></li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2><span class="lang hu">Készségek</span><span class="lang en">Skills</span></h2>
+        <ul>
+          <li><span class="lang hu">F# és C# alapok, OOP és FP</span><span class="lang en">Basics of F# and C#, OOP and FP</span></li>
+          <li><span class="lang hu">HTML, CSS (közép–haladó), PHP alapismeretek</span><span class="lang en">HTML, CSS (intermediate–advanced), basic PHP</span></li>
+          <li><span class="lang hu">Vezetői tapasztalat</span><span class="lang en">Leadership experience</span></li>
+          <li><span class="lang hu">Fejlődéshez/tanuláshoz való nyitottság</span><span class="lang en">Willingness to learn</span></li>
+          <li><span class="lang hu">Környezethez való alkalmazkodás</span><span class="lang en">Adaptability</span></li>
+          <li><span class="lang hu">Magas szintű számítógépes ismeretek</span><span class="lang en">Advanced computer skills</span></li>
+		  
+		  
+		  
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2><span class="lang hu">Nyelvtudás</span><span class="lang en">Languages</span></h2>
+        <ul>
+          <li><span class="lang hu">Angol - B2 (napi szintű használat, közel C1)</span><span class="lang en">English - B2 (close to C1 in daily use)</span></li>
+          <li><span class="lang hu">Olasz - A2</span><span class="lang en">Italian - A2</span></li>
+          <li><span class="lang hu">Magyar - Anyanyelv</span><span class="lang en">Hungarian - Native</span></li>
+        </ul>
+      </section>
+	  
+	  <section class="card">
+        <h2><span class="lang hu">Rólam</span><span class="lang en">About Me</span></h2>
+        <p class="lang hu">21 éves mérnökinformatikus hallgató vagyok Magyarországon, akit gyermekkora óta mélyen érdekel a technológia világa. Szabadidőm nagy részét IT-projektek készítésével vagy játékokkal töltöm, ahol ötvözöm a kreativitást és a technikai kíváncsiságot. Elkötelezett, céltudatos vagyok, és büszke vagyok arra, hogy önállóan és csapatban egyaránt hatékonyan tudok dolgozni. Mindig nyitott vagyok új készségek/képességek elsajátítására, és szívesen segítek másoknak is a tanulásban.
+		<br><br>Gyakorlati tapasztalatom van szabadúszóként, kisebb weboldalak készítésében személyes felhasználásra és streamerek számára. Technikai tudásom középszintű és haladó HTML- és CSS-ismereteket foglal magába, valamint jelenleg PHP-t is tanulok. Python és Blox programozást is tanítok 18 év alatti diákoknak, ami jelentősen fejlesztette a kommunikációs és mentorálási képességeimet. Programozás terén még van tapasztalatom a fent említetteken kívűl további objektumorientált programozásban (C#) és funkcionális programozásban (F#) is. Célom, hogy hosszú távon megbízható és szakmailag kielégítő pozíciót szerezzek az IT területén, miközben tanulmányaimat is sikeresen, kiváló eredménnyel fejezem be.</br></br></p>
+        <p class="lang en">I am a 21-year-old Computer Engineering student in Hungary with a deep interest in technology since childhood. I spend much of my free time working on IT projects or gaming, combining creativity with technical curiosity. I am committed, goal-oriented, and proud of being able to work effectively both independently and as part of a team. I am always eager to learn new skills and enjoy helping others in their learning process.
+		<br><br>I have practical experience as a freelancer, creating small websites for personal use and for streamers. My technical knowledge includes intermediate to advanced HTML and CSS, and I am currently learning PHP. I also teach Python and Blox programming to students under 18, which has significantly developed my communication and mentoring skills. Additionally, I have experience in object-oriented programming (C#) and functional programming (F#). My goal is to secure a long-term, reliable, and professionally fulfilling position in the IT field while successfully completing my studies with excellent results.</br></br></p>
+      </section>
+
+      <a class="btn" href="Pletser_Lilla_CV_HUN.pdf">
+        <span class="lang hu">CV letöltése (PDF)</span>
+        <span class="lang en">Download CV (PDF)</span>
+      </a>
+    </main>
+  </div>
+
+  <div class="lang-switch">
+    <span id="lang-hu" onclick="setLang('hu')" style="font-size:18px">&#x1f1ed;&#x1f1fa;</span>|<span id="lang-en" onclick="setLang('en')" style="font-size:18px">🇪🇳</span>
+  </div>
+
+<script>
+    function setLang(lang) {
+      document.querySelectorAll('.lang').forEach(el => {
+        el.style.display = el.classList.contains(lang) ? 'inline' : 'none';
+      });
+      document.getElementById('lang-hu').classList.toggle('active', lang === 'hu');
+      document.getElementById('lang-en').classList.toggle('active', lang === 'en');
+      localStorage.setItem('site-lang', lang);
+    }
+
+    window.onload = () => {
+      const saved = localStorage.getItem('site-lang') || 'hu';
+      setLang(saved);
+    };
+  </script>
+</body>
+</html>
